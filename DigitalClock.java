@@ -15,18 +15,18 @@ public class DigitalClock {
   public static void main(String[] arguments) {
  
     ClockLabel dateLable = new ClockLabel("date");
-    ClockLabel timeLable = new ClockLabel("time");
-    ClockLabel dayLable = new ClockLabel("day");
+   // ClockLabel timeLable = new ClockLabel("time");
+   // ClockLabel dayLable = new ClockLabel("day");
  
-    JFrame.setDefaultLookAndFeelDecorated(true);
+    //JFrame.setDefaultLookAndFeelDecorated(true);
     JFrame f = new JFrame("Digital Clock");
     f.setSize(300,150);
-    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    //f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     f.setLayout(new GridLayout(3, 1));
  
     f.add(dateLable);
-    f.add(timeLable);
-    f.add(dayLable);
+   // f.add(timeLable);
+    //f.add(dayLable);
  
     f.getContentPane().setBackground(Color.black);
  
@@ -44,18 +44,18 @@ class ClockLabel extends JLabel implements ActionListener {
     setForeground(Color.white);
  
     switch (type) {
-      case "date" : sdf = new SimpleDateFormat("  MMMM dd yyyy");
+      case "date" : sdf = new SimpleDateFormat("  MMMM dd yyyy hh:mm:ss a EEEE");
                     setFont(new Font("sans-serif", Font.PLAIN, 12));
                     setHorizontalAlignment(SwingConstants.LEFT);
                     break;
-      case "time" : sdf = new SimpleDateFormat("hh:mm:ss a");
-                    setFont(new Font("sans-serif", Font.PLAIN, 40));
-                    setHorizontalAlignment(SwingConstants.CENTER);
-                    break;
-      case "day"  : sdf = new SimpleDateFormat("EEEE  ");
-                    setFont(new Font("sans-serif", Font.PLAIN, 16));
-                    setHorizontalAlignment(SwingConstants.RIGHT);
-                    break;
+      //case "time" : sdf = new SimpleDateFormat("hh:mm:ss a");
+       //             setFont(new Font("sans-serif", Font.PLAIN, 20));
+       //             setHorizontalAlignment(SwingConstants.CENTER);
+       //             break;
+      //case "day"  : sdf = new SimpleDateFormat("EEEE  ");
+       //             setFont(new Font("sans-serif", Font.PLAIN, 12));
+       //             setHorizontalAlignment(SwingConstants.RIGHT);
+       //             break;
       default     : sdf = new SimpleDateFormat();
                     break;
     }
