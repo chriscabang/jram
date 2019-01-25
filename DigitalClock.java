@@ -44,7 +44,7 @@ class ClockLabel extends JLabel implements ActionListener {
     setForeground(Color.white);
  
     switch (type) {
-      case "date" : sdf = new SimpleDateFormat("  MMMM dd yyyy hh:mm:ss a EEEE");
+      case "date" : sdf = new SimpleDateFormat("  MMMM dd yyyy - hh:mm:ss - EEEE");
                     setFont(new Font("sans-serif", Font.PLAIN, 12));
                     setHorizontalAlignment(SwingConstants.LEFT);
                     break;
