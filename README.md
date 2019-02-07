@@ -10,5 +10,6 @@
 ```
 Date Started: December 15, 2018
 ```
-
-Date expected to be released: February 09,2019**
+```
+Date expected to be released: February 09,2019
+```
